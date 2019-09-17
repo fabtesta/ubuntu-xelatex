@@ -1,6 +1,8 @@
 FROM ubuntu:18.04
+LABEL maintainer="fabtesta@gmail.com" \
+      version="1.0.0"
 
-LABEL mantainer="Fabio Testa"
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt update && \
     apt upgrade -y
@@ -10,10 +12,8 @@ RUN apt install -y --no-install-recommends \
   ca-certificates \
   inotify-tools \
   make \
-  make texlive-full && \
+  texlive-full && \
   apt autoclean && apt --purge --yes autoremove
 
 WORKDIR /data
 VOLUME ["/data"]
-
-#CMD ["bash"]
