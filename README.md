@@ -17,7 +17,7 @@ docker run --rm -v $(pwd):/data fabtesta/ubuntu-xelatex xelatex filename.tex
 
 * Simple pdftex pdf compile:
 ```
-docker run --rm -v $(pwd):/data fabtesta/ubuntu-xelatex pdftex filename.tex
+docker run --rm -v $(pwd):/data fabtesta/ubuntu-xelatex pdflatex filename.tex
 ```
 
 * Simple xelatex with make:
