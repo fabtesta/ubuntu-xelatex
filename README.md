@@ -12,19 +12,19 @@ You can use to do instantaneous compile for each save with `inotify-tools`.
 
 * Simple pdf compile:
 ```
-docker run --rm -v $(pwd):/data fabtesta/ubuntu-xelatex xelatex filename
+docker run --rm -v $(pwd):/data fabtesta/ubuntu-xelatex xelatex filename.tex
 ```
 
 * Simple make:
 
 ```
-docker run --rm -v $(pwd):/data fabtesta/ubuntu-xelatex make
+docker run --rm -v $(pwd):/data fabtesta/ubuntu-xelatex make filename="filename.tex"
 ```
 
 * Watch file and recompile for each save:
 
 ```
-docker run --rm -v $(pwd):/data fabtesta/ubuntu-xelatex make view
+docker run --rm -v $(pwd):/data fabtesta/ubuntu-xelatex make filename="filename.tex" view
 ```
 
 ## Makefile Example
